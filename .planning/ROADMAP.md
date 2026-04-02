@@ -30,9 +30,9 @@ AI Agent Arena delivers a competitive platform where users upload TypeScript AI 
 **Plans**: 3 plans
 
 Plans:
-- [ ] 01-01-PLAN.md — Monorepo scaffold, Docker Compose PostgreSQL, DB schema, shared types
-- [ ] 01-02-PLAN.md — Better Auth system (email/password, GitHub OAuth, API keys) + Next.js auth UI
-- [ ] 01-03-PLAN.md — Agent upload pipeline (file + GitHub link) + isolated-vm sandbox POC
+- [x] 01-01-PLAN.md — Monorepo scaffold, Docker Compose PostgreSQL, DB schema, shared types
+- [x] 01-02-PLAN.md — Better Auth system (email/password, GitHub OAuth, API keys) + Next.js auth UI
+- [x] 01-03-PLAN.md — Agent upload pipeline (file + GitHub link) + isolated-vm sandbox POC
 
 ### Phase 2: Snake Discipline and Spectating
 **Goal**: Users can run their agent in a Snake game and watch the match live or as a replay
@@ -44,12 +44,12 @@ Plans:
   3. User can watch a completed Snake match as a replay from start to finish
   4. User can see a decision overlay during spectating that shows high-level agent actions
   5. Machine-readable Snake specification (TypeScript interfaces + JSON Schema) exists and a starter agent generated from the spec compiles and runs successfully
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 02-01: TBD
-- [ ] 02-02: TBD
-- [ ] 02-03: TBD
+- [ ] 02-01-PLAN.md — Snake specification (Zod schemas, JSON Schema, starter agent) + deterministic Snake engine
+- [ ] 02-02-PLAN.md — Match execution pipeline (DB schema, MatchSandbox, match runner, Redis broadcaster, API endpoints)
+- [ ] 02-03-PLAN.md — WebSocket spectating, PixiJS renderer, decision overlay, replay UI, match pages
 
 ### Phase 3: Competition Infrastructure
 **Goal**: Users can challenge each other, track performance, and compete on leaderboards
