@@ -27,12 +27,12 @@ AI Agent Arena delivers a competitive platform where users upload TypeScript AI 
   3. User can upload a TypeScript agent file through the web UI
   4. User can link an agent from a GitHub repository URL
   5. An uploaded agent executes inside an isolated-vm sandbox with CPU/memory limits enforced (verified by a test that attempts resource exhaustion)
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 01-01: TBD
-- [ ] 01-02: TBD
-- [ ] 01-03: TBD
+- [ ] 01-01-PLAN.md — Monorepo scaffold, Docker Compose PostgreSQL, DB schema, shared types
+- [ ] 01-02-PLAN.md — Better Auth system (email/password, GitHub OAuth, API keys) + Next.js auth UI
+- [ ] 01-03-PLAN.md — Agent upload pipeline (file + GitHub link) + isolated-vm sandbox POC
 
 ### Phase 2: Snake Discipline and Spectating
 **Goal**: Users can run their agent in a Snake game and watch the match live or as a replay
@@ -89,7 +89,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation and Agent Pipeline | 0/3 | Not started | - |
+| 1. Foundation and Agent Pipeline | 0/3 | Planning complete | - |
 | 2. Snake Discipline and Spectating | 0/3 | Not started | - |
 | 3. Competition Infrastructure | 0/3 | Not started | - |
 | 4. Territory War and Programmatic API | 0/2 | Not started | - |
