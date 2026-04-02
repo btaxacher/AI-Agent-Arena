@@ -10,8 +10,8 @@ progress:
   total_phases: 4
   completed_phases: 0
   total_plans: 3
-  completed_plans: 1
-  percent: 33
+  completed_plans: 2
+  percent: 67
 ---
 
 # Project State
@@ -26,28 +26,28 @@ See: .planning/PROJECT.md (updated 2026-04-01)
 ## Current Position
 
 Phase: 1 of 4 (Foundation and Agent Pipeline)
-Plan: 1 of 3 in current phase
+Plan: 2 of 3 in current phase
 Status: Executing
-Last activity: 2026-04-02 -- Completed 01-01-PLAN.md
+Last activity: 2026-04-02 -- Completed 01-02-PLAN.md
 
-Progress: [███░░░░░░░] 33%
+Progress: [██████░░░░] 67%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 1
-- Average duration: 9min
-- Total execution time: 0.15 hours
+- Total plans completed: 2
+- Average duration: 15min
+- Total execution time: 0.50 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| 1 | 1/3 | 9min | 9min |
+| 1 | 2/3 | 30min | 15min |
 
 **Recent Trend:**
-- Last 5 plans: -
-- Trend: -
+- Last 5 plans: 9min, 21min
+- Trend: stable
 
 *Updated after each plan completion*
 
@@ -64,6 +64,10 @@ Recent decisions affecting current work:
 - [Roadmap]: Snake before Territory War (validates entire pipeline before PvP complexity)
 - [01-01]: Better Auth tables created manually in Drizzle schema to avoid migration conflicts
 - [01-01]: Agent code stored in PostgreSQL text columns for Phase 1 simplicity
+- [01-02]: Better Auth API key plugin uses referenceId (not userId) -- middleware checks both
+- [01-02]: Added verification table for OAuth state management
+- [01-02]: Tailwind CSS v4 with CSS-based config (no tailwind.config.js)
+- [01-02]: Tests run sequentially (fileParallelism: false) to avoid DB conflicts
 
 ### Pending Todos
 
@@ -78,5 +82,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-04-02
-Stopped at: Completed 01-01-PLAN.md
+Stopped at: Completed 01-02-PLAN.md
 Resume file: None
