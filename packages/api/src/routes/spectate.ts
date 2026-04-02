@@ -1,21 +1,13 @@
 import { Hono } from "hono"
-import type { WSContext } from "hono/ws"
-
-type UpgradeWebSocket = (
-  handler: (c: unknown) => {
-    onOpen?: (evt: Event, ws: WSContext) => void
-    onMessage?: (evt: MessageEvent, ws: WSContext) => void
-    onClose?: (evt: CloseEvent, ws: WSContext) => void
-    onError?: (evt: Event, ws: WSContext) => void
-  }
-) => (c: unknown) => Response | Promise<Response>
+import type { WSContext, WSEvents } from "hono/ws"
 
 /**
  * Creates spectate routes with WebSocket support.
  * Each WebSocket connection subscribes to a Redis channel for live match frames.
  */
 export function createSpectateRoutes(
-  upgradeWebSocket: UpgradeWebSocket
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  upgradeWebSocket: (createEvents: (c: any) => WSEvents) => any
 ): Hono {
   const router = new Hono()
 
