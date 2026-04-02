@@ -1,0 +1,24 @@
+{
+  "name": "@repo/db",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts",
+    "db:push": "drizzle-kit push",
+    "db:generate": "drizzle-kit generate"
+  },
+  "dependencies": {
+    "drizzle-orm": "^0.40.0",
+    "postgres": "^3.4.0",
+    "nanoid": "^5.1.0"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^0.31.0",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.0"
+  }
+}
