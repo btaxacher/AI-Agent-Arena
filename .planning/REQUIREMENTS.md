@@ -16,8 +16,8 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Agent Management
 
-- [ ] **AGNT-01**: User can upload agent as TypeScript file
-- [ ] **AGNT-02**: User can link agent from GitHub repository
+- [x] **AGNT-01**: User can upload agent as TypeScript file
+- [x] **AGNT-02**: User can link agent from GitHub repository
 - [ ] **AGNT-03**: User can manage multiple versions of an agent
 - [ ] **AGNT-04**: User can view win/loss statistics per agent
 
@@ -97,8 +97,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | AUTH-02 | Phase 1 | Complete |
 | AUTH-03 | Phase 1 | Complete |
 | AUTH-04 | Phase 1 | Complete |
-| AGNT-01 | Phase 1 | Pending |
-| AGNT-02 | Phase 1 | Pending |
+| AGNT-01 | Phase 1 | Complete |
+| AGNT-02 | Phase 1 | Complete |
 | AGNT-03 | Phase 3 | Pending |
 | AGNT-04 | Phase 3 | Pending |
 | GAME-01 | Phase 2 | Pending |

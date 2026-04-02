@@ -10,7 +10,7 @@ AI Agent Arena delivers a competitive platform where users upload TypeScript AI 
 - Integer phases (1, 2, 3, 4): Planned milestone work
 - Decimal phases (e.g., 2.1): Urgent insertions (marked with INSERTED)
 
-- [ ] **Phase 1: Foundation and Agent Pipeline** - User accounts, agent upload, sandboxed execution proof-of-concept, monorepo and database setup
+- [x] **Phase 1: Foundation and Agent Pipeline** - User accounts, agent upload, sandboxed execution proof-of-concept, monorepo and database setup (completed 2026-04-02)
 - [ ] **Phase 2: Snake Discipline and Spectating** - Game engine, Snake game, machine-readable specs, replay viewer, live spectating
 - [ ] **Phase 3: Competition Infrastructure** - Challenge system, leaderboards, match history, agent versioning and stats, house bots
 - [ ] **Phase 4: Territory War and Programmatic API** - Second discipline (PvP), REST API for Claude Code integration
@@ -89,7 +89,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation and Agent Pipeline | 2/3 | In Progress|  |
+| 1. Foundation and Agent Pipeline | 3/3 | Complete   | 2026-04-02 |
 | 2. Snake Discipline and Spectating | 0/3 | Not started | - |
 | 3. Competition Infrastructure | 0/3 | Not started | - |
 | 4. Territory War and Programmatic API | 0/2 | Not started | - |
