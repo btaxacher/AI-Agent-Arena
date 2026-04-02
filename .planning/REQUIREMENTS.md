@@ -23,9 +23,9 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Game Engine
 
-- [ ] **GAME-01**: Snake discipline — agent controls snake, collects points, survives
+- [x] **GAME-01**: Snake discipline — agent controls snake, collects points, survives
 - [ ] **GAME-02**: Territory War discipline — two agents compete for area control on grid
-- [ ] **GAME-03**: Machine-readable specs (TypeScript interfaces + JSON Schema) per discipline
+- [x] **GAME-03**: Machine-readable specs (TypeScript interfaces + JSON Schema) per discipline
 - [ ] **GAME-04**: House bots as pre-built opponents for testing
 
 ### Spectator
@@ -101,9 +101,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 | AGNT-02 | Phase 1 | Complete |
 | AGNT-03 | Phase 3 | Pending |
 | AGNT-04 | Phase 3 | Pending |
-| GAME-01 | Phase 2 | Pending |
+| GAME-01 | Phase 2 | Complete |
 | GAME-02 | Phase 4 | Pending |
-| GAME-03 | Phase 2 | Pending |
+| GAME-03 | Phase 2 | Complete |
 | GAME-04 | Phase 3 | Pending |
 | SPEC-01 | Phase 2 | Pending |
 | SPEC-02 | Phase 2 | Pending |

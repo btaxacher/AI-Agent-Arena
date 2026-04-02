@@ -2,16 +2,16 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: completed
-stopped_at: Completed 01-03-PLAN.md (Phase 1 complete)
-last_updated: "2026-04-02T12:31:24.921Z"
-last_activity: 2026-04-02 -- Completed 01-03-PLAN.md
+status: in-progress
+stopped_at: Completed 02-01-PLAN.md
+last_updated: "2026-04-02T23:29:26Z"
+last_activity: 2026-04-03 -- Completed 02-01-PLAN.md
 progress:
   total_phases: 4
   completed_phases: 1
-  total_plans: 3
-  completed_plans: 3
-  percent: 100
+  total_plans: 6
+  completed_plans: 4
+  percent: 67
 ---
 
 # Project State
@@ -21,16 +21,16 @@ progress:
 See: .planning/PROJECT.md (updated 2026-04-01)
 
 **Core value:** Users build AI agents that compete in observable, fair games -- and watching those agents fight is as compelling as building them.
-**Current focus:** Phase 1: Foundation and Agent Pipeline
+**Current focus:** Phase 2: Snake Discipline and Spectating
 
 ## Current Position
 
-Phase: 1 of 4 (Foundation and Agent Pipeline)
-Plan: 3 of 3 in current phase
-Status: Phase 1 Complete
-Last activity: 2026-04-02 -- Completed 01-03-PLAN.md
+Phase: 2 of 4 (Snake Discipline and Spectating)
+Plan: 1 of 3 in current phase
+Status: Plan 02-01 Complete
+Last activity: 2026-04-03 -- Completed 02-01-PLAN.md
 
-Progress: [██████████] 100% (Phase 1)
+Progress: [██████░░░░] 67% (Overall)
 
 ## Performance Metrics
 
@@ -44,9 +44,10 @@ Progress: [██████████] 100% (Phase 1)
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 1 | 3/3 | 39min | 13min |
+| 2 | 1/3 | 8min | 8min |
 
 **Recent Trend:**
-- Last 5 plans: 9min, 21min, 9min
+- Last 5 plans: 9min, 21min, 9min, 8min
 - Trend: stable
 
 *Updated after each plan completion*
@@ -81,10 +82,12 @@ None yet.
 
 - [Phase 1]: RESOLVED -- isolated-vm resource limiting validated: timeout at 100ms, memory at 8MB both work correctly
 - [Phase 1]: Better Auth is newer library -- needs validation during implementation
-- [Phase 2]: Deterministic PRNG and fixed-point arithmetic library selection needed
+- [Phase 2]: RESOLVED -- prando selected for deterministic PRNG, integer-only arithmetic (no fixed-point library needed)
+- [02-01]: Used Zod v4 built-in toJSONSchema instead of zod-to-json-schema (v3 incompatible with Zod v4)
+- [02-01]: Prando imported via require() with CJS/ESM interop wrapper to fix tsup DTS build
 
 ## Session Continuity
 
-Last session: 2026-04-02
-Stopped at: Completed 01-03-PLAN.md (Phase 1 complete)
+Last session: 2026-04-03
+Stopped at: Completed 02-01-PLAN.md
 Resume file: None
