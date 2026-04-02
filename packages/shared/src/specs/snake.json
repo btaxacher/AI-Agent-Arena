@@ -1,0 +1,117 @@
+{
+  "gameState": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "properties": {
+      "tick": {
+        "type": "integer",
+        "minimum": 0,
+        "maximum": 9007199254740991
+      },
+      "snake": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "x": {
+              "type": "integer",
+              "minimum": -9007199254740991,
+              "maximum": 9007199254740991
+            },
+            "y": {
+              "type": "integer",
+              "minimum": -9007199254740991,
+              "maximum": 9007199254740991
+            }
+          },
+          "required": [
+            "x",
+            "y"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "food": {
+        "type": "object",
+        "properties": {
+          "x": {
+            "type": "integer",
+            "minimum": -9007199254740991,
+            "maximum": 9007199254740991
+          },
+          "y": {
+            "type": "integer",
+            "minimum": -9007199254740991,
+            "maximum": 9007199254740991
+          }
+        },
+        "required": [
+          "x",
+          "y"
+        ],
+        "additionalProperties": false
+      },
+      "direction": {
+        "type": "string",
+        "enum": [
+          "up",
+          "down",
+          "left",
+          "right"
+        ]
+      },
+      "score": {
+        "type": "integer",
+        "minimum": 0,
+        "maximum": 9007199254740991
+      },
+      "alive": {
+        "type": "boolean"
+      },
+      "gridWidth": {
+        "type": "integer",
+        "exclusiveMinimum": 0,
+        "maximum": 9007199254740991
+      },
+      "gridHeight": {
+        "type": "integer",
+        "exclusiveMinimum": 0,
+        "maximum": 9007199254740991
+      }
+    },
+    "required": [
+      "tick",
+      "snake",
+      "food",
+      "direction",
+      "score",
+      "alive",
+      "gridWidth",
+      "gridHeight"
+    ],
+    "additionalProperties": false
+  },
+  "move": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "properties": {
+      "direction": {
+        "type": "string",
+        "enum": [
+          "up",
+          "down",
+          "left",
+          "right"
+        ]
+      },
+      "reasoning": {
+        "type": "string",
+        "maxLength": 200
+      }
+    },
+    "required": [
+      "direction"
+    ],
+    "additionalProperties": false
+  }
+}

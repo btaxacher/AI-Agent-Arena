@@ -12,5 +12,8 @@
   "devDependencies": {
     "tsup": "^8.4.0",
     "typescript": "^5.8.0"
+  },
+  "dependencies": {
+    "zod-to-json-schema": "^3.25.2"
   }
 }
