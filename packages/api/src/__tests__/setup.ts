@@ -7,13 +7,16 @@ import * as schema from "@repo/db/schema"
 import { sql } from "drizzle-orm"
 import { Hono } from "hono"
 import { cors } from "hono/cors"
+import type { Context, Next } from "hono"
+import { createAgentRoutes } from "../routes/agents.js"
+import type { AuthVariables } from "../middleware/auth.js"
 
 const databaseUrl =
   process.env.DATABASE_URL ??
   "postgres://postgres:postgres@localhost:5432/ai_agent_arena"
 
 const client = postgres(databaseUrl)
-const testDb = drizzle(client, { schema })
+export const testDb = drizzle(client, { schema })
 
 // Create a test auth instance
 export const testAuth = betterAuth({
@@ -42,6 +45,44 @@ export const testAuth = betterAuth({
   baseURL: "http://localhost:3001",
 })
 
+// Auth middleware that uses testAuth instance
+async function testRequireAuth(
+  c: Context<{ Variables: AuthVariables }>,
+  next: Next
+): Promise<Response | void> {
+  const sessionResult = await testAuth.api.getSession({
+    headers: c.req.raw.headers,
+  })
+
+  if (sessionResult) {
+    c.set("user", sessionResult.user as AuthVariables["user"])
+    c.set("session", sessionResult.session as AuthVariables["session"])
+    return next()
+  }
+
+  // Try API key from Authorization header
+  const authHeader = c.req.header("Authorization")
+  if (authHeader?.startsWith("Bearer ")) {
+    const key = authHeader.slice(7)
+    try {
+      const keyResult = await testAuth.api.verifyApiKey({
+        body: { key },
+      })
+      const userId =
+        keyResult?.key?.userId ?? keyResult?.key?.referenceId
+      if (keyResult?.valid && userId) {
+        c.set("user", { id: userId } as AuthVariables["user"])
+        c.set("session", { userId } as AuthVariables["session"])
+        return next()
+      }
+    } catch {
+      // API key verification failed
+    }
+  }
+
+  return c.json({ success: false, error: "Unauthorized" }, 401)
+}
+
 // Create a test Hono app
 function createTestApp() {
   const app = new Hono()
@@ -59,6 +100,10 @@ function createTestApp() {
   app.all("/api/auth/*", async (c) => {
     return testAuth.handler(c.req.raw)
   })
+
+  // Mount agent routes with test auth middleware
+  const testAgentRoutes = createAgentRoutes(testRequireAuth)
+  app.route("/api", testAgentRoutes)
 
   // Protected test endpoint
   app.get("/api/protected", async (c) => {
@@ -137,7 +182,7 @@ export async function createAuthenticatedUser(
 // Clean up tables before each test - use TRUNCATE CASCADE for safety
 export async function cleanDatabase() {
   await testDb.execute(
-    sql`TRUNCATE "apikey", "verification", "account", "session", "user" CASCADE`
+    sql`TRUNCATE "agents", "apikey", "verification", "account", "session", "user" CASCADE`
   )
 }
 
