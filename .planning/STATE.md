@@ -3,15 +3,15 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: in-progress
-stopped_at: Completed 02-01-PLAN.md
-last_updated: "2026-04-02T23:29:26Z"
-last_activity: 2026-04-03 -- Completed 02-01-PLAN.md
+stopped_at: Completed 02-02-PLAN.md
+last_updated: "2026-04-02T23:40:00Z"
+last_activity: 2026-04-03 -- Completed 02-02-PLAN.md
 progress:
   total_phases: 4
   completed_phases: 1
   total_plans: 6
-  completed_plans: 4
-  percent: 67
+  completed_plans: 5
+  percent: 83
 ---
 
 # Project State
@@ -26,11 +26,11 @@ See: .planning/PROJECT.md (updated 2026-04-01)
 ## Current Position
 
 Phase: 2 of 4 (Snake Discipline and Spectating)
-Plan: 1 of 3 in current phase
-Status: Plan 02-01 Complete
-Last activity: 2026-04-03 -- Completed 02-01-PLAN.md
+Plan: 2 of 3 in current phase
+Status: Plan 02-02 Complete
+Last activity: 2026-04-03 -- Completed 02-02-PLAN.md
 
-Progress: [██████░░░░] 67% (Overall)
+Progress: [████████░░] 83% (Overall)
 
 ## Performance Metrics
 
@@ -44,10 +44,10 @@ Progress: [██████░░░░] 67% (Overall)
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 1 | 3/3 | 39min | 13min |
-| 2 | 1/3 | 8min | 8min |
+| 2 | 2/3 | 16min | 8min |
 
 **Recent Trend:**
-- Last 5 plans: 9min, 21min, 9min, 8min
+- Last 5 plans: 9min, 21min, 9min, 8min, 8min
 - Trend: stable
 
 *Updated after each plan completion*
@@ -85,9 +85,12 @@ None yet.
 - [Phase 2]: RESOLVED -- prando selected for deterministic PRNG, integer-only arithmetic (no fixed-point library needed)
 - [02-01]: Used Zod v4 built-in toJSONSchema instead of zod-to-json-schema (v3 incompatible with Zod v4)
 - [02-01]: Prando imported via require() with CJS/ESM interop wrapper to fix tsup DTS build
+- [02-02]: MatchSandbox uses JSON.stringify inside isolate for object transfer (isolated-vm limitation)
+- [02-02]: Engine package needed exports field in package.json for Vite module resolution
+- [02-02]: Match execution runs inline in POST handler (BullMQ queuing deferred)
 
 ## Session Continuity
 
 Last session: 2026-04-03
-Stopped at: Completed 02-01-PLAN.md
+Stopped at: Completed 02-02-PLAN.md
 Resume file: None
