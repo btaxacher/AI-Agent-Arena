@@ -30,9 +30,9 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Spectator
 
-- [ ] **SPEC-01**: User can watch running matches live via WebSocket
+- [x] **SPEC-01**: User can watch running matches live via WebSocket
 - [x] **SPEC-02**: User can watch completed matches as replay
-- [ ] **SPEC-03**: Decision overlay shows high-level agent decisions during spectating
+- [x] **SPEC-03**: Decision overlay shows high-level agent decisions during spectating
 
 ### Match System
 
@@ -105,9 +105,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 | GAME-02 | Phase 4 | Pending |
 | GAME-03 | Phase 2 | Complete |
 | GAME-04 | Phase 3 | Pending |
-| SPEC-01 | Phase 2 | Pending |
+| SPEC-01 | Phase 2 | Complete |
 | SPEC-02 | Phase 2 | Complete |
-| SPEC-03 | Phase 2 | Pending |
+| SPEC-03 | Phase 2 | Complete |
 | MTCH-01 | Phase 3 | Pending |
 | MTCH-02 | Phase 3 | Pending |
 | MTCH-03 | Phase 3 | Pending |
