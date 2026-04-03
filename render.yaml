@@ -1,3 +1,10 @@
+databases:
+  - name: ai-agent-arena-db
+    plan: free
+    databaseName: ai_agent_arena
+    user: arena
+    region: frankfurt
+
 services:
   - type: web
     name: ai-agent-arena-api
@@ -7,18 +14,31 @@ services:
     plan: free
     envVars:
       - key: DATABASE_URL
-        sync: false
+        fromDatabase:
+          name: ai-agent-arena-db
+          property: connectionString
       - key: REDIS_URL
-        sync: false
-      - key: JWT_SECRET
-        generateValue: true
+        fromService:
+          name: ai-agent-arena-redis
+          type: redis
+          property: connectionString
       - key: BETTER_AUTH_SECRET
         generateValue: true
       - key: BETTER_AUTH_URL
         sync: false
       - key: FRONTEND_URL
         sync: false
+      - key: GITHUB_CLIENT_ID
+        sync: false
+      - key: GITHUB_CLIENT_SECRET
+        sync: false
       - key: NODE_ENV
         value: production
       - key: PORT
         value: "3001"
+
+  - type: redis
+    name: ai-agent-arena-redis
+    plan: free
+    region: frankfurt
+    maxmemoryPolicy: allkeys-lru
