@@ -2,7 +2,7 @@
 set -e
 
 echo "=== Installing dependencies ==="
-npm install
+npm install --include=dev
 
 echo "=== Building shared package ==="
 cd packages/shared
