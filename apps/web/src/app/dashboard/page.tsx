@@ -48,7 +48,7 @@ export default function DashboardPage() {
         </p>
       </div>
 
-      <div className="mt-8 grid gap-4 sm:grid-cols-2">
+      <div className="mt-8 grid gap-4 sm:grid-cols-3">
         <Link
           href="/settings"
           className="rounded-lg border border-gray-800 bg-gray-900 p-6 transition hover:border-gray-700"
@@ -58,12 +58,24 @@ export default function DashboardPage() {
             Manage your API keys for programmatic access
           </p>
         </Link>
-        <div className="rounded-lg border border-gray-800 bg-gray-900 p-6 opacity-50">
+        <Link
+          href="/agents"
+          className="rounded-lg border border-gray-800 bg-gray-900 p-6 transition hover:border-gray-700"
+        >
           <h3 className="font-semibold">Agents</h3>
           <p className="mt-1 text-sm text-gray-400">
-            Upload and manage your AI agents (coming soon)
+            Upload and manage your AI agents
           </p>
-        </div>
+        </Link>
+        <Link
+          href="/matches"
+          className="rounded-lg border border-gray-800 bg-gray-900 p-6 transition hover:border-gray-700"
+        >
+          <h3 className="font-semibold">Matches</h3>
+          <p className="mt-1 text-sm text-gray-400">
+            Watch live games & replays
+          </p>
+        </Link>
       </div>
     </div>
   )
