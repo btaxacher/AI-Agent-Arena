@@ -5,23 +5,15 @@ echo "=== Installing dependencies ==="
 npm install --include=dev
 
 echo "=== Building shared package ==="
-cd packages/shared
-npx tsup src/index.ts --format esm --dts
-cd ../..
+npm run build --workspace=packages/shared
 
 echo "=== Building db package ==="
-cd packages/db
-npx tsup src/index.ts --format esm --dts
-cd ../..
+npm run build --workspace=packages/db
 
 echo "=== Building engine package ==="
-cd packages/engine
-npx tsup src/index.ts --format esm --dts
-cd ../..
+npm run build --workspace=packages/engine
 
 echo "=== Building api package ==="
-cd packages/api
-npx tsup src/index.ts --format esm --dts
-cd ../..
+npm run build --workspace=packages/api
 
 echo "=== Build complete ==="
